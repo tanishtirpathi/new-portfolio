@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Merienda", sans-serif;
   background-color: #18181b;
 }
 
@@ -71,7 +71,6 @@ nav {
 .link a:hover {
   position: relative;
   padding-bottom: 0.75rem;
-  transform: scale(1.1);
   color: #fff;
 }
 .link a::after {
@@ -201,7 +200,10 @@ section .header {
   background-color: #323232;
   border-color: #fff;
 }
-
+.features .card:hover #join {
+  border: 1px solid white;
+  border-radius: 4px;
+}
 .features .card span {
   display: inline-block;
   background-color: #1e40af;
@@ -226,11 +228,14 @@ section .header {
 
 .features .card a {
   color: #fff;
-  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  transition: all 0.3s ease-in;
 }
 
 .features .card a:hover {
-  color: #1e40af;
+  color: #0026a3a1;
+  background-color: rgba(252, 252, 252, 0.781);
 }
 
 .sub-header {
@@ -351,6 +356,11 @@ footer .column .socials a {
   color: black;
   background-color: #e7e9ee;
   border-color: #e9ebf0;
+}
+#yt:hover {
+  color: rgb(255, 255, 255);
+  background-color: #ff0000;
+  border-color: #ff0000;
 }
 #link:hover {
   color: black;
