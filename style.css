@@ -124,15 +124,35 @@ header {
   align-items: center;
   gap: 2rem;
 }
+.contente {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Start off-screen to the right */
+  transition: all 0.9s ease-in-out; /* Smooth transition */
+}
+nav {
+  opacity: 0; /* Start hidden */
+  transform: translatey(-100%); /* Start off-screen to the right */
+  transition: all 0.9s ease-in-out;
+}
+.image {
+  opacity: 0; /* Start hidden */
+  transform: translatex(100%); /* Start off-screen to the right */
+  transition: all 0.9s ease-in-out;
+}
 
-header .content h4 {
+.show {
+  opacity: 1; /* Make visible */
+  transform: translateX(0); /* Move to the middle */
+}
+
+header .contente h4 {
   margin-bottom: 1rem;
   color: #ccc;
   font-size: 1rem;
   font-weight: 600;
 }
 
-header .content h1 {
+header .contente h1 {
   color: #fff;
   margin-bottom: 1rem;
   font-size: 3rem;
@@ -140,12 +160,12 @@ header .content h1 {
   line-height: 4rem;
 }
 
-header .content h1 span {
+header .contente h1 span {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #fff;
 }
 
-header .content p {
+header .contente p {
   margin-bottom: 2rem;
   color: #ccc;
 }
@@ -373,7 +393,16 @@ footer .column .socials a {
   border-color: #00bd19;
 }
 footer .column h4 {
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  transition: all 0.3s ease-out;
+  font-weight: 500;
+}
+footer .column h4:hover {
+  color: #3428e9;
+  box-shadow: 2px 2px 10px whitesmoke;
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -381,6 +410,7 @@ footer .column h4 {
 
 footer .column > a {
   display: block;
+  padding: 10px 20px;
   color: #ccc;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
